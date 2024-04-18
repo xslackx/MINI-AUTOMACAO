@@ -6,3 +6,5 @@ lib64
 __pycache__
 recon-old.py
 client.py
+Dockerfile
+*.txt
