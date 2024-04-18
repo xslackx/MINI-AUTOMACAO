@@ -1,10 +1,8 @@
 from model.rcn import InfoRecon
 from model.motd import Banner
-from time import sleep
 from socket import gethostbyname
 from subprocess import PIPE, Popen
 from urllib.parse import urlparse
-
 
 class Recon(InfoRecon):
     def __init__(self, domainame: str) -> None:
@@ -33,7 +31,12 @@ class Recon(InfoRecon):
                 response = finddomain.stdout.read()
                 self.restools["findomain"] = response.decode()
                 
-        if arjun: pass
+        if arjun:
+            if self.restools.get("findomain"):
+                cmd = "arjun -u " + self.domainame
+                with Popen(cmd, shell=True, stdout=PIPE) as Arjun:
+                    response = Arjun.stdout.read()
+                    self.restools["arjun"] = response
         
         if nmap:
             cmd = "nmap -p 21,22,25,53,80,110,123,143,443,465,631,993,995 " + self.iphost
