@@ -1,36 +1,27 @@
 # MINI-AUTOMACAO
-Um pequeno código de automação em Python. Atenção: Observe que ele depende de ferramentas instaladas!!
+Um pequeno código de automação em Python. 
 
-Observação:
+## Observação:
 
+Necessário ter instalado no sistema o Nmap, httprobe e findomain.
 
-Antes de executar essa ferramenta, você deve ter instalado em seu Sistema: 
+Nmap: https://github.com/nmap/nmap
 
-Nmap, httprobe, arjun, findomain, pyfiglet
+httprobe: https://github.com/tomnomnom/httprobe
 
-Siga os links:
+findomain: https://github.com/Findomain/Findomain
 
+## Etapas
 
-Nmap:
-
-https://github.com/nmap/nmap
-
-
-httprobe:
-
-https://github.com/tomnomnom/httprobe
-
-findomain:
-
-https://github.com/Findomain/Findomain
-
-
-Pyfiglet:
-
-
-https://pypi.org/project/pyfiglet/0.7/
-
-
-Arjun:
-
-https://github.com/s0md3v/Arjun
+- Clone este repositório.
+```
+git clone https://github.com/ismael0liveira/MINI-AUTOMACAO.git
+```
+- Crie o ambiente virtual
+```
+cd MINI-AUTOMACAO && python3 -m venv . 
+```
+- Instale o requirements.txt
+```
+source bin/activate && pip install -r requirements.txt
+```
