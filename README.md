@@ -1,4 +1,4 @@
-# MINI-AUTOMACAO
+# MINI-AUTOMAÇÃO
 Um pequeno código de automação em Python. 
 
 ## Observação:
